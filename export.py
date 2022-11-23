@@ -250,7 +250,6 @@ def export_end2end(model, im, file, opset, nms_cfg, dynamic, simplify, prefix=co
 
 @try_export
 def export_openvino(model, file, half, prefix=colorstr('OpenVINO:')):
->>>>>>> 99de36c3 (New PR for "https://github.com/ultralytics/yolov5/pull/7736")
     # YOLOv5 OpenVINO export
     check_requirements('openvino-dev')  # requires openvino-dev: https://pypi.org/project/openvino-dev/
     import openvino.inference_engine as ie
