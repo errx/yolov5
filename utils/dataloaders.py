@@ -527,7 +527,10 @@ class LoadImagesAndLabels(Dataset):
         self.indices = range(n)
 
         # Update labels
-        include_class = []  # filter labels to include only these classes (optional)
+        # 0 - ball, 2 - zero
+        # !!UPDATE ME!!
+        include_class = [0, 2]  # filter labels to include only these classes (optional)
+
         include_class_array = np.array(include_class).reshape(1, -1)
         for i, (label, segment) in enumerate(zip(self.labels, self.segments)):
             if include_class:
